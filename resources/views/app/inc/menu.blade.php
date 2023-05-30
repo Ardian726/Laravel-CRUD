@@ -43,7 +43,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown {{ request()->routeIs('category', 'author', 'borrowings') ? 'active' : '' }}">
                         <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown"
                             data-bs-auto-close="outside" role="button" aria-expanded="false">
                             <span class="nav-link-title">
@@ -51,13 +51,13 @@
                             </span>
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('category') }}" target="_blank" rel="noopener">
+                            <a class="dropdown-item" href="{{ route('category') }}" rel="noopener">
                                 Kategori
                             </a>
-                            <a class="dropdown-item" href="{{ route('author') }}">
+                            <a class="dropdown-item" href="{{ route('author') }}" rel="noopener">
                                 Penulis
                             </a>
-                            <a class="dropdown-item" href="{{ route('borrowings') }}" target="_blank" rel="noopener">
+                            <a class="dropdown-item" href="{{ route('borrowings') }}" rel="noopener">
                                 Peminjaman
                             </a>
                         </div>
